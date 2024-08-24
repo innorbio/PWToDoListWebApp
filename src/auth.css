@@ -1,0 +1,226 @@
+
+h1 {
+    font-weight: 900;
+    font-size: 48px;
+    margin: 0;
+    margin-bottom: 32px;
+}
+
+.error {
+    color: red;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+
+label {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+span {
+    font-size: 12px;
+}
+
+a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0;
+}
+
+.container {
+    margin-top: 150px;
+    padding: 30px;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+}
+
+.container .input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 8px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.container .input-group-top {
+    margin-bottom: 20px;
+}
+
+input {
+    border: unset;
+    background-color: unset;
+    padding: 12px 34px !important;
+    background-color: rgba(0, 0, 0, .4);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 100px;
+    width: 100%;
+    transition: all ease-in-out .3s;
+    color: #ffffff;
+}
+
+input:hover {
+    transform: scale(1.1);
+}
+
+input:focus {
+    outline: unset;
+    border-bottom: 2px solid #2db2ff;
+}
+
+.container .cta-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+    width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.cta-primary {
+    position: relative;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 50px;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.cta-primary span {
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255, 255, 255, 0.05);
+	box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	border-top: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	padding: 10px;
+	letter-spacing: 1px;
+	text-decoration: none;
+	overflow: hidden;
+	color: #fff;
+	font-weight: 900px !important;
+	z-index: 1;
+	transition: 0.5s;
+	backdrop-filter: blur(15px);
+    font-size: 20px;
+}
+
+.container .cta-primary:hover span {
+	letter-spacing: 3px;
+}
+.container .cta-primary span::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to left, rgba(255, 255, 255, 0.15), transparent);
+	transform: skewX(45deg) translate(0);
+	transition: 0.5s;
+	filter: blur(0px);
+}
+.container .cta-primary:hover span::before {
+	transform: skewX(45deg) translate(200px);
+}
+.container .cta-primary::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	bottom: -5px;
+	width: 30px;
+	height: 10px;
+	background: #2db2ff45;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.container .cta-primary:hover::before /*lightup button*/ {
+	bottom: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+
+.container .cta-primary::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	transform: translatex(-50%);
+	top: -5px;
+	width: 30px;
+	height: 10px;
+	background: #2db2ff45;
+	border-radius: 10px;
+	transition: 0.5s;
+	transition-delay: 0.5;
+}
+.container .cta-primary:hover::after /*lightup button*/ {
+	top: 0;
+	height: 50%;
+	width: 80%;
+	border-radius: 30px;
+}
+.container .cta-primary:nth-child(1)::before, /*chnage 1*/
+.container .cta-primary:nth-child(1)::after {
+	background: #2db2ff45;
+	box-shadow: 0 0 5px #2db2ff45, 0 0 15px #2db2ff45, 0 0 30px #2db2ff45,
+		0 0 60px #2db2ff45;
+}
+
+.cta-secondary {
+    border: unset;
+    background-color: unset;
+    color: #ffffff;
+    font-size: 16px;
+    text-decoration: underline;
+    margin-top: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cta-secondary:hover {
+    color: #2db2ff;
+}
+
+@media only screen and (min-width: 1440px) {
+    .container {
+        padding: 50px;
+    }
+}

@@ -5,7 +5,7 @@
 - Animation
 - Add ToDo Items
 - Delete ToDo Items
-- Mark and completed and Uncompleted ToDo Items
+- Mark as completed and Uncompleted ToDo Items
 - Syncs between Users in reacl time
 
 # Tech Stack

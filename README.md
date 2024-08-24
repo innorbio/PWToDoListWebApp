@@ -93,7 +93,7 @@
 2. **Run the App:**
    - To start the development server, run:
      ```bash
-     npm start
+     npm run dev
      ```
 
 3. **Verify App is Running:**

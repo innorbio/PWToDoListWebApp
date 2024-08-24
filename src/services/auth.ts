@@ -1,5 +1,4 @@
-// src/authService.ts
-
+// import auth db instance 
 import { auth } from "./db";
 import {
   createUserWithEmailAndPassword,

@@ -3,15 +3,20 @@ import { signUp } from "../services/auth";
 import "../auth.css"
 
 const Register = (props: any) => {
+  // Stores email
   const [email, setEmail] = useState<string>("");
+  // Stores Password
   const [password, setPassword] = useState<string>("");
+  // Stpres error messages
   const [registerError, setRegisterError] = useState<string>("");
 
   useEffect(() => {
+    // Gets error messages stores in local storage
     setRegisterError(localStorage.getItem('registerError') || "")
   })
   
 
+  // Signsup user and call service level logic for signing up the user in the db
   const handleSignUp = async () => {
     localStorage.removeItem('registerError')
     try {

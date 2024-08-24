@@ -1,25 +1,18 @@
-import { useEffect } from "react";
-import { deleteTodo, fetchTodos, listenForTodos, updateTodo } from "../services/realtimeDatabase";
-import { TodoItem as TodoItemType } from '../interfaces/types';
 import "../index.css"
-
-interface TodoItemProps {
-    todo: TodoItemType;
-    onToggleCompletion: (id: string, completed: boolean) => void;
-    onDelete: (id: string) => void;
-}
 
 const ToDoItem = (props: any) => {
 
-
+    // Handles toggle of completed / not completed tasks and calls parent component logic
     const handleToggle = () => {
         props.onToggleCompletion(props.todo.id, props.todo.completed);
     };
 
+    // Handled deletion of task and calls parent component logic
     const handleDelete = () => {
         props.onDelete(props.id);
     };
 
+    // Handles key presses and disables default logic for key presses
     const handleKeyPress = (e: any) => {
         e.preventDefault()
     }

@@ -2,11 +2,11 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 import { getDatabase } from 'firebase/database';
-// TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Firbase Config Function
 const firebaseConfig = {
 
   apiKey: "AIzaSyAdlg9iiNVf4Kq4L-5X6diKu4xOpha8wfM",
@@ -28,5 +28,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+// Get auth database instance
 export const auth = getAuth(app)
+// Get realtime database instance
 export const db = getDatabase(app);

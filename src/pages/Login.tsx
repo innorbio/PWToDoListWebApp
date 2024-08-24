@@ -3,15 +3,20 @@ import { logIn } from "../services/auth";
 import "../auth.css"
 
 const Login = (props: any) => {
+  // Stores the users email they enter into the input field
   const [email, setEmail] = useState<string>("");
+  // Stores the users password they enter into the input field
   const [password, setPassword] = useState<string>("");
+  // Stores the error message
   const [loginError, setLoginError] = useState<string>("");
 
   useEffect(() => {
+    // Gets the error message from local storage
     setLoginError(localStorage.getItem('loginError') || "")
   })
   
 
+  // Logs the user in and calls service level logic for logging in the user with the db
   const handleLogIn = async () => {
     localStorage.removeItem('loginError')
     try {

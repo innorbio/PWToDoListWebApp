@@ -55,8 +55,7 @@ export const fetchTodos = async (): Promise<TodoItem[]> => {
   }
 };
 
-
-// In todoService.ts
+// Listener for data changes in the database
 export const listenForTodos = (callback: (todos: TodoItem[]) => void) => {
   const unsubscribe = onValue(todosRef, (snapshot) => {
     const data = snapshot.val();

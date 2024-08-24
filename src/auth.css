@@ -1,27 +1,27 @@
-
-h1 {
+/* login / register specific code */
+.container h1 {
     font-weight: 900;
     font-size: 48px;
     margin: 0;
     margin-bottom: 32px;
 }
 
-.error {
+.container .error {
     color: red;
     font-size: 20px;
     margin-bottom: 50px;
 }
 
-label {
+.container label {
     font-size: 20px;
     font-weight: 600;
 }
 
-span {
+.container span {
     font-size: 12px;
 }
 
-a {
+.container a {
     color: #333;
     font-size: 14px;
     text-decoration: none;
@@ -60,6 +60,8 @@ a {
 .container .input-group-top {
     margin-bottom: 20px;
 }
+
+/* Global input style code */
 
 input {
     border: unset;
@@ -140,6 +142,8 @@ input:focus {
     font-size: 20px;
 }
 
+/* Specific button styles of login and register */
+
 .container .cta-primary:hover span {
 	letter-spacing: 3px;
 }
@@ -204,6 +208,8 @@ input:focus {
 		0 0 60px #2db2ff45;
 }
 
+/* Global button styles for secondary button */
+
 .cta-secondary {
     border: unset;
     background-color: unset;
@@ -218,6 +224,8 @@ input:focus {
 .cta-secondary:hover {
     color: #2db2ff;
 }
+
+/* Adjustments to ensure styles look good not just on mobile but also larger screen sizes */
 
 @media only screen and (min-width: 1440px) {
     .container {

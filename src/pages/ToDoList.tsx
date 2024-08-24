@@ -5,7 +5,9 @@ import { listenForTodos } from "../services/realtimeDatabase";
 import ToDoItem from "./ToDoItem";
 
 const ToDoList = () => {
+    // Store todos
     const [todos, setTodos] = useState<TodoItemType[]>([]);
+    // Store new todos being added to the database (for use with the input of new todos)
     const [newTodoTitle, setNewTodoTitle] = useState<string>('');
 
     useEffect(() => {
@@ -29,6 +31,7 @@ const ToDoList = () => {
         };
     }, []);
 
+    // Adds and calls service level logic to add new todos to the db and display
     const handleAddTodo = async () => {
         if (newTodoTitle.trim() === '') return;
 
@@ -41,15 +44,18 @@ const ToDoList = () => {
         setNewTodoTitle('');
     };
 
+    // Updates and calls service level logic to update todos in the db and display
     const handleToggleCompletion = async (id: string, completed: boolean) => {
         console.log(!completed)
         await updateTodo(id, { completed: !completed });
     };
 
+    // Deletes and calls service level logic to delete todos from the db and display
     const handleDeleteTodo = async (id: string) => {
         await deleteTodo(id);
     };
 
+    // Allows new todos the be added when the neter key is pressed
     const handKeyPress = (e: any) => {
         if (e.keyCode == 13) {
             console.log("Enter key pressed")
@@ -78,9 +84,7 @@ const ToDoList = () => {
                                     onDelete={handleDeleteTodo} />
                             ))
                         }
-
                     </div>
-                    <div className="card-footer"></div>
                 </div>
             </form>
         </>
